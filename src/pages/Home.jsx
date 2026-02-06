@@ -15,12 +15,6 @@ function Home() {
           backgroundPosition: "center",
         }}
       >
-        {/* Overlay */}
-        {/* <div
-          className="position-absolute top-0 start-0 w-100 h-100"
-          style={{ backgroundColor: "rgba(0,0,0,0.65)" }}
-        /> */}
-
         {/* Content */}
         <div className="position-relative container">
           <h1 className="display-4 fw-bold mb-3">
