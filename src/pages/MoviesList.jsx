@@ -8,10 +8,10 @@ function MoviesList() {
   useEffect((resp) => {
     axios
       .get("http://localhost:3000/api/movies")
-      .then(function (response) {
+      .then(function (resp) {
         // handle success
-        console.log(response.data.movies);
-        setMoviesList(response.data.movies);
+        console.log(resp.data.movies);
+        setMoviesList(resp.data.movies);
       })
       .catch(function (error) {
         // handle error
@@ -30,14 +30,11 @@ function MoviesList() {
           <h3>null...</h3>
         ) : (
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2">
-            {moviesList.map((curMovie) => {
-              console.log(curMovie);
-              return (
-                <div className="col" key={curMovie.id}>
-                  <MovieCard movie={curMovie} />
-                </div>
-              );
-            })}
+            {moviesList.map((curMovie) => (
+              <div className="col" key={curMovie.id}>
+                <MovieCard movie={curMovie} />
+              </div>
+            ))}
           </div>
         )}
       </div>
